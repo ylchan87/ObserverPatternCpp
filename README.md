@@ -1,13 +1,12 @@
 # About
-Self study to implement Observer pattern in C++
+Simple implementation of Observer pattern in C++
 
-Publisher / Observable / Boardcaster
-Subscriber / Observer / Listener
+Done for self study.
 
-# Goal
-In simple implementation (eg. https://refactoring.guru/design-patterns/observer/cpp/example), if a subscriber goes out of scope, the publisher would have a dangling pointer.
+# Design Goal
+In basic implementation of the observer pattern (eg. https://refactoring.guru/design-patterns/observer/cpp/example), if a subscriber goes out of scope, the publisher would have a dangling pointer.
 
-In this repo implementation, we try to do better:
+In this repo's implementation, we try to do better:
 1. Use RAII to achieve auto unsubscribe if subscriber goes out of scope
 2. Use smart pointers
 3. Use template to make a general publisher class that could publish different types
@@ -55,12 +54,12 @@ meson init --name ObserverPatternCpp --build
 ```
 
 # Ref
-Basic implementation:
+Basic implementation:  
 https://refactoring.guru/design-patterns/observer/cpp/example
 
-Template implementation:
+Template implementation:  
 https://gist.github.com/sacopon/f34d2c992dd683c9367d97786e05185d
 
-Using RAII to achieve auto unsubscribe, use std::function callback:
+Using RAII to achieve auto unsubscribe, use std::function callback:  
 https://stackoverflow.com/questions/39516416/using-weak-ptr-to-implement-the-observer-pattern
 
